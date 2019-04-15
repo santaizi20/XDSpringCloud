@@ -1,0 +1,17 @@
+package com.xd;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Start {
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		public static void main(String[] args) {
+			SpringApplication.run(FastsellApplication.class, args);
+		}
+		
+	}
+
+}

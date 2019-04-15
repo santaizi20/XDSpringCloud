@@ -1,0 +1,21 @@
+INDEX VERSION 1.130+/Users/mac/Documents/springcloud/workspace-spring-tool-suite-4-4.1.0.RELEASE/.metadata/.plugins/org.eclipse.jdt.core
+3019955289.index
+3064173860.index
+1781518711.index
+51216479.index
+2574500924.index
+841863281.index
+443931336.index
+3591994323.index
+317838856.index
+2848709667.index
+4291758277.index
+2874845798.index
+2314021921.index
+3911596175.index
+425890123.index
+212560256.index
+2556055627.index
+3980850610.index
+3403320597.index
+348454274.index

@@ -1,0 +1,8 @@
+package com.xd;
+
+
+@EnableEurekaServer
+@SpringBootApplication
+public class Start {
+	SpringApplication.run(Start.class);
+}
