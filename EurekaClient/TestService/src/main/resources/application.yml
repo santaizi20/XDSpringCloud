@@ -1,9 +1,9 @@
 server:
-  port: 8182
+  port: 8111
 
 spring:
   application:
-    name: XDTestService
+    name: UserService
 
 eureka:
   client:

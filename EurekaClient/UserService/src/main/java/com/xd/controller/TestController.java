@@ -1,32 +1,29 @@
 package com.xd.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.GetMapping;
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.xd.entity.User;
+import com.xd.service.UserService;
 
 @RestController
+@RequestMapping("user")
 public class TestController {
-    private Logger log = LoggerFactory.getLogger(this.getClass());
+	@Resource
+	UserService userService;
 
-    @Autowired
-    private DiscoveryClient client;
+	@RequestMapping("showname/{name}")
+	public List<User> getUserByName(@PathVariable("name") String name) {
+		return userService.selectByName(name);
+	}
 
-    @GetMapping("/info")
-    public String info() {
-        @SuppressWarnings("deprecation")
-        ServiceInstance instance = client.getLocalServiceInstance();
-        String info = "host：" + instance.getHost() + "，service_id：" + instance.getServiceId();
-        log.info(info);
-        return info;
-    }
-    @GetMapping("/hello")
-    public String hello() {
-        return "hello world";
-    }
+	@RequestMapping("test")
+	public String test() {
+		return "hello";
+	}
 }
